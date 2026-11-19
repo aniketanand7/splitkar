@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SplitKar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SplitKar</h1>
+    <p class="tagline">Split trip expenses with friends</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="people-heading">
+      <div class="card-head">
+        <h2 id="people-heading">People</h2>
+        <span id="people-count" class="count"></span>
+      </div>
+
+      <form id="add-person-form" autocomplete="off">
+        <label for="person-name" class="visually-hidden">Name</label>
+        <input id="person-name" type="text" maxlength="30" placeholder="Name, e.g. Ravi" enterkeyhint="done">
+        <button type="submit">Add</button>
+      </form>
+      <p id="people-message" class="message" role="status" aria-live="polite"></p>
+
+      <ul id="people-list" class="people"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
